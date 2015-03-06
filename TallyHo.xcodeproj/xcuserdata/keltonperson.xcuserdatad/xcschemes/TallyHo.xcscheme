@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DB2E05441AA9380F00C960C1"
+               BlueprintIdentifier = "DBF595751AA93DC100C50DAB"
                BuildableName = "TallyHo.app"
                BlueprintName = "TallyHo"
                ReferencedContainer = "container:TallyHo.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DB2E05591AA9380F00C960C1"
+               BlueprintIdentifier = "DBF5958A1AA93DC100C50DAB"
                BuildableName = "TallyHoTests.xctest"
                BlueprintName = "TallyHoTests"
                ReferencedContainer = "container:TallyHo.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DB2E05591AA9380F00C960C1"
+               BlueprintIdentifier = "DBF5958A1AA93DC100C50DAB"
                BuildableName = "TallyHoTests.xctest"
                BlueprintName = "TallyHoTests"
                ReferencedContainer = "container:TallyHo.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DB2E05441AA9380F00C960C1"
+            BlueprintIdentifier = "DBF595751AA93DC100C50DAB"
             BuildableName = "TallyHo.app"
             BlueprintName = "TallyHo"
             ReferencedContainer = "container:TallyHo.xcodeproj">
@@ -75,7 +75,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DB2E05441AA9380F00C960C1"
+            BlueprintIdentifier = "DBF595751AA93DC100C50DAB"
             BuildableName = "TallyHo.app"
             BlueprintName = "TallyHo"
             ReferencedContainer = "container:TallyHo.xcodeproj">
@@ -93,7 +93,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DB2E05441AA9380F00C960C1"
+            BlueprintIdentifier = "DBF595751AA93DC100C50DAB"
             BuildableName = "TallyHo.app"
             BlueprintName = "TallyHo"
             ReferencedContainer = "container:TallyHo.xcodeproj">
