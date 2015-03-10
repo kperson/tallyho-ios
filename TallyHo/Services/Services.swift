@@ -12,6 +12,7 @@ extension HeaderBuilder {
     
     func addAuth() -> HeaderBuilder {
         //TODO
+        //addCustomHeader("X-TOKEN", value: "Somthing")
         return self
     }
     
