@@ -14,6 +14,7 @@
 		DB3147B51AAE5C0100FBD50C /* ProjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3147B41AAE5C0100FBD50C /* ProjectManager.swift */; };
 		DB3147B71AAE5D4600FBD50C /* HeaderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3147B61AAE5D4600FBD50C /* HeaderBuilder.swift */; };
 		DB3147B91AAE60E300FBD50C /* RestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3147B81AAE60E300FBD50C /* RestError.swift */; };
+		DB3147BC1AAE9B8D00FBD50C /* TallyHo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3147BB1AAE9B8D00FBD50C /* TallyHo.swift */; };
 		DBF5957C1AA93DC100C50DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF5957B1AA93DC100C50DAB /* AppDelegate.swift */; };
 		DBF595811AA93DC100C50DAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF5957F1AA93DC100C50DAB /* Main.storyboard */; };
 		DBF595831AA93DC100C50DAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF595821AA93DC100C50DAB /* Images.xcassets */; };
@@ -64,6 +65,7 @@
 		DB3147B41AAE5C0100FBD50C /* ProjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectManager.swift; sourceTree = "<group>"; };
 		DB3147B61AAE5D4600FBD50C /* HeaderBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderBuilder.swift; sourceTree = "<group>"; };
 		DB3147B81AAE60E300FBD50C /* RestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestError.swift; sourceTree = "<group>"; };
+		DB3147BB1AAE9B8D00FBD50C /* TallyHo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TallyHo.swift; sourceTree = "<group>"; };
 		DBF595761AA93DC100C50DAB /* TallyHo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TallyHo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF5957A1AA93DC100C50DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBF5957B1AA93DC100C50DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DB3147BA1AAE9B7800FBD50C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				DB3147BB1AAE9B8D00FBD50C /* TallyHo.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		DBF5956D1AA93DC100C50DAB = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				DBF5957B1AA93DC100C50DAB /* AppDelegate.swift */,
+				DB3147BA1AAE9B7800FBD50C /* Config */,
 				07B898B71AA94B79005018C9 /* Controllers */,
 				DBF5959B1AA93E7700C50DAB /* FSwift */,
 				DBF595821AA93DC100C50DAB /* Images.xcassets */,
@@ -457,6 +468,7 @@
 				DBF595BB1AA93E7700C50DAB /* Dictionary.swift in Sources */,
 				DBF595B91AA93E7700C50DAB /* Signal.swift in Sources */,
 				DBF595BD1AA93E7700C50DAB /* ListExtension.swift in Sources */,
+				DB3147BC1AAE9B8D00FBD50C /* TallyHo.swift in Sources */,
 				DBF595BF1AA93E7700C50DAB /* ServiceUtil.swift in Sources */,
 				DBF595C21AA93E7700C50DAB /* Rect.swift in Sources */,
 				DBF595C51AA93E7700C50DAB /* IntervalExtension.swift in Sources */,

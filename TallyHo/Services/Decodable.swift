@@ -21,7 +21,9 @@ class DecodableList<T:Decodable>: Decodable {
     
     required init(decoder:Decoder) {
         let arr = decoder.arr!
-        list = map(arr) { x in T(decoder: x) }
+        list = map(arr) { x in
+            T(decoder: x)
+        }
     }
     
 }

@@ -46,7 +46,7 @@ public struct Decoder {
     
     
     private var rawDictionary: [String : AnyObject]?
-    private var rawArray: [AnyObject]?
+    var rawArray: [AnyObject]?
     private var value: AnyObject?
     private var error: NSError?
     let depth: Int
@@ -70,7 +70,7 @@ public struct Decoder {
             if let a = value as? [AnyObject] {
                 self.rawArray = a
             }
-            else if let d = val as? [String : AnyObject] {
+            else if let d = value as? [String : AnyObject]  {
                 self.rawDictionary = d
             }
             else {

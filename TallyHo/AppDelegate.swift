@@ -21,6 +21,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = attributes
         UIApplication.sharedApplication().keyWindow?.tintColor = UIColor.whiteColor()
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent;
+        
+        let projectManager = TallyHo.Service.projectManager
+        
+        projectManager.fetchProjects().onSuccess { projects in
+            println(projects)
+        }
+        
+        
+        
+        
+        
         return true
     }
 
