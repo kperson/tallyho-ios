@@ -8,7 +8,68 @@
 
 import Foundation
 
+extension HeaderBuilder {
+    
+    func addAuth() -> HeaderBuilder {
+        //TODO
+        return self
+    }
+    
+}
+
+extension NSError {
+    
+    var errorMessage:String {
+        if let message = self.userInfo?["errorMessage"] as? String {
+            return message
+        }
+        else{
+            return "an unexpected error has occurred"
+        }
+    }
+    
+}
+
+
+class Service {
+    
+    class func endpointUrl(path: String) -> String {
+        //TODO - make configurable
+        let host = "https://apps.keltini.com"
+        if path.hasPrefix("/") {
+            return host + path
+        }
+        else {
+            return host + "/" + path
+        }
+    }
+    
+    class func checkForServiceErrors(res: RequestResponse) -> Try<RequestResponse> {
+        if(res.statusCode < 400) {
+            return Try<RequestResponse>.Success(res)
+        }
+        else  {
+            switch res.body.dictDecoderFromJSON {
+            case .Success(let decoder):
+                let restError = RestError(decoder: decoder())
+                let error = NSError(domain: "com.tallyho", code: res.statusCode, userInfo: ["errorMessage" : restError.error])
+                return Try<RequestResponse>.Failure(error)
+                
+            case .Failure(let error):
+                return Try<RequestResponse>.Failure(error)
+            }
+        }
+    }
+    
+    
+}
+
 class Services {
+    
+
+    
+    
+    
     class func Login(username: String, password: String, url: String)  {
         var params: Dictionary<String, AnyObject> = ["username" : username, "password" : password]
         let formattedURL = (url + "/auth")
@@ -16,7 +77,13 @@ class Services {
         defaultHeaders["Content-Type"] = "application/json"
         defaultHeaders["Accept"] = "application/json"
         ServiceUtil.post(formattedURL, body: Services.asJson(params)!, headers: defaultHeaders).map(Services.checkForRestErrorAndValidJSON).onSuccess { x in
+            
+            
+            let projects = DecodableList<Project>(decoder: x.body.arrDecoderFromJSON.value!).list
+            
                 println("success")
+           
+            
             }.onFailure {
                 x in
                 println("failure")
@@ -43,9 +110,9 @@ class Services {
     
     private class func restError(response: RequestResponse) -> Try<RequestResponse> {
         if(response.body.length > 0) {
-            let errorJSON = JSON.parse(response.body).value!
-            let finalError = NSError(domain: "com.tallyho", code:0, userInfo:["error": errorJSON["error"].string!])
-            return Try.Failure(finalError)
+            //let errorJSON = JSON.parse(response.body).value!
+            //let finalError = NSError(domain: "com.tallyho", code:0, userInfo:["error": errorJSON["error"].string!])
+            return Try.Failure(NSError())
         }
         else {
             return Try.Failure(defaultError())
