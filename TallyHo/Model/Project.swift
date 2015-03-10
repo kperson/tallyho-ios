@@ -10,12 +10,14 @@ import Foundation
 
 class Project : Decodable  {
     
-    let name: String
-    let branchDetails: [BranchDetail]
+//    let name: String
+//    let branchDetails: [BranchDetail]
     
     required init(decoder: Decoder) {
-        self.name = decoder["name"].string!
-        self.branchDetails = DecodableList<BranchDetail>(decoder: decoder["branchDetails"]).list
+        let dict = decoder.dict
+        println(dict)
+//        self.name = decoder["name"].string!
+//        self.branchDetails = DecodableList<BranchDetail>(decoder: decoder["branchDetails"]).list
     }
     
 }

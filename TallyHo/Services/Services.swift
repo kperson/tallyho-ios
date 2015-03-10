@@ -74,13 +74,12 @@ class Services {
     class func Login(username: String, password: String, url: String)  {
         var params: Dictionary<String, AnyObject> = ["username" : username, "password" : password]
         let formattedURL = (url + "/auth")
-        var defaultHeaders: Dictionary<String, AnyObject> = [:]
-        defaultHeaders["Content-Type"] = "application/json"
-        defaultHeaders["Accept"] = "application/json"
-        ServiceUtil.post(formattedURL, body: Services.asJson(params)!, headers: defaultHeaders).map(Services.checkForRestErrorAndValidJSON).onSuccess { x in
-            
-            
-            let projects = DecodableList<Project>(decoder: x.body.arrDecoderFromJSON.value!).list
+        let headers: HeaderBuilder = HeaderBuilder()
+        headers.acceptJSON()
+        headers.sendJSON()
+        headers.addAuth()
+        ServiceUtil.post(formattedURL, body: Services.asJson(params)!, headers: headers.build()).map(Services.checkForRestErrorAndValidJSON).onSuccess { x in
+
             
                 println("success")
            
@@ -90,6 +89,23 @@ class Services {
                 println("failure")
         }
     }
+    
+    class func listProjects() {
+        let formattedURL = ("https://apps.keltini.com" + "/projects")
+        let headers: HeaderBuilder = HeaderBuilder()
+        headers.acceptJSON()
+        headers.sendJSON()
+        headers.addAuth()
+        ServiceUtil.get(formattedURL, headers:headers.build()).map(Services.checkForRestErrorAndValidJSON).onSuccess { x in
+            let projects = DecodableList<Project>(decoder: x.body.arrDecoderFromJSON.value!).list
+            }.onFailure {
+                x in
+                println(x.userInfo)
+        }
+    }
+
+    
+    
     
     class func checkForRestErrorAndValidJSON(response: RequestResponse) -> Try<RequestResponse> {
         var error: NSError?

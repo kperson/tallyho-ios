@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        Services.listProjects()
         // Do any additional setup after loading the view.
         
     }
