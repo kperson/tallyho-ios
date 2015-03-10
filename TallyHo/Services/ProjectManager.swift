@@ -23,7 +23,6 @@ class RestProjectManager : ProjectManager {
         return ServiceUtil.get(projectUrl, headers: headers)
         .map(Service.checkForServiceErrors)
         .map { res in
-            println("response: " + res.bodyAsText)
             let decoder = res.body.arrDecoderFromJSON.value!
             let projects = DecodableList<Project>(decoder: decoder).list
             return Try.Success(projects)
