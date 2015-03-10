@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		07B898B91AA94B79005018C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B898B81AA94B79005018C9 /* LoginViewController.swift */; };
 		07B898BD1AA94C38005018C9 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B898BC1AA94C38005018C9 /* Services.swift */; };
+		07CD3F681AAE8D40001F025E /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CD3F671AAE8D40001F025E /* Projects.swift */; };
 		81A85812234139F6F917977C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D866E15CA868D8BDAE9ADB7 /* libPods.a */; };
 		DB3147B31AAE5BCE00FBD50C /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3147B21AAE5BCE00FBD50C /* UserManager.swift */; };
 		DB3147B51AAE5C0100FBD50C /* ProjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3147B41AAE5C0100FBD50C /* ProjectManager.swift */; };
@@ -58,6 +59,7 @@
 /* Begin PBXFileReference section */
 		07B898B81AA94B79005018C9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		07B898BC1AA94C38005018C9 /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		07CD3F671AAE8D40001F025E /* Projects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
 		7CD869FFA8C3EBDA4A136995 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9D866E15CA868D8BDAE9ADB7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB68821D34DF53453DA3D426 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				DBF595D31AADF75500C50DAB /* Project.swift */,
 				DBF595D51AADF80100C50DAB /* BranchDetail.swift */,
 				DB3147B81AAE60E300FBD50C /* RestError.swift */,
+				07CD3F671AAE8D40001F025E /* Projects.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				DBF595D41AADF75500C50DAB /* Project.swift in Sources */,
 				DBF595D11AADF6E700C50DAB /* Decodable.swift in Sources */,
 				DBF595B61AA93E7700C50DAB /* Color.swift in Sources */,
+				07CD3F681AAE8D40001F025E /* Projects.swift in Sources */,
 				DB3147B71AAE5D4600FBD50C /* HeaderBuilder.swift in Sources */,
 				DBF595C81AA93E7700C50DAB /* UIControlExtension.swift in Sources */,
 			);
