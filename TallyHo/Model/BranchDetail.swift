@@ -21,6 +21,6 @@ class BranchDetail : Decodable {
         if let version = decoder["currentVersionIndex"].int {
             self.currentVersionIndex = version
         }
-        envVariables = decoder["envs"].dict!.items as [String : String]
+        self.envVariables = decoder["envs"].dict!.items as [String : String]
     }
 }
