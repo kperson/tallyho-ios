@@ -10,14 +10,14 @@ import Foundation
 
 protocol ProjectManager {
 
-    func projects() -> Future<[Project]>
+    func fetchProjects() -> Future<[Project]>
     
 }
 
 
 class RestProjectManager : ProjectManager {
     
-    func projects() -> Future<[Project]> {
+    func fetchProjects() -> Future<[Project]> {
         let headers = HeaderBuilder().acceptJSON().addAuth().build()
         let projectUrl = Service.endpointUrl("/projects")
         return ServiceUtil.get(projectUrl, headers: headers)
