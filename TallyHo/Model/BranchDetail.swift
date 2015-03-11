@@ -13,7 +13,8 @@ class BranchDetail : Decodable {
     let branch: String
     let numVersions: Int
     let currentVersionIndex: Int?
-    let envVariables:[String : String]
+    let envVariables: [String : String]
+    let routes: [Routes]?
     
     required init(decoder: Decoder) {
         self.branch = decoder["branch"].string!
@@ -22,5 +23,7 @@ class BranchDetail : Decodable {
             self.currentVersionIndex = version
         }
         self.envVariables = decoder["envs"].dict!.items as [String : String]
+        self.routes = DecodableList<Routes>(decoder: decoder["routes"]).list
+        
     }
 }

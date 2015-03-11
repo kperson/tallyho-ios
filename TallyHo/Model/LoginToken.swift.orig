@@ -2,17 +2,31 @@
 //  LoginToken.swift
 //  TallyHo
 //
+<<<<<<< Updated upstream
+//  Created by Kelton Person on 3/10/15.
+=======
 //  Created by Eric on 3/10/15.
+>>>>>>> Stashed changes
 //  Copyright (c) 2015 TallyHo. All rights reserved.
 //
 
 import Foundation
 
 class LoginToken : Decodable {
+<<<<<<< Updated upstream
+    
+    let token: String
+    
+    required init(decoder: Decoder) {
+        self.token = decoder["token"].string!
+    }
+    
+=======
     let token: String
     required init(decoder: Decoder) {
         self.token = decoder["token"].string!
     }
 
 
+>>>>>>> Stashed changes
 }

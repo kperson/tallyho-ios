@@ -11,7 +11,6 @@
 		074DB8D21AAFC05400224FD4 /* Ports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074DB8D11AAFC05400224FD4 /* Ports.swift */; };
 		074DB8D41AAFC20600224FD4 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074DB8D31AAFC20600224FD4 /* Routes.swift */; };
 		074DB8D61AAFD00400224FD4 /* LoginToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074DB8D51AAFD00400224FD4 /* LoginToken.swift */; };
-		079D54C61AAFEE3F00C66375 /* KeychainAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D54C51AAFEE3F00C66375 /* KeychainAccess.m */; };
 		07B898B91AA94B79005018C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B898B81AA94B79005018C9 /* LoginViewController.swift */; };
 		07B898BD1AA94C38005018C9 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B898BC1AA94C38005018C9 /* Services.swift */; };
 		81A85812234139F6F917977C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D866E15CA868D8BDAE9ADB7 /* libPods.a */; };
@@ -20,6 +19,7 @@
 		DB3147B71AAE5D4600FBD50C /* HeaderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3147B61AAE5D4600FBD50C /* HeaderBuilder.swift */; };
 		DB3147B91AAE60E300FBD50C /* RestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3147B81AAE60E300FBD50C /* RestError.swift */; };
 		DB3147BC1AAE9B8D00FBD50C /* TallyHo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3147BB1AAE9B8D00FBD50C /* TallyHo.swift */; };
+		DB3147D21AAFE5A900FBD50C /* LoginToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3147D11AAFE5A900FBD50C /* LoginToken.swift */; };
 		DBF5957C1AA93DC100C50DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF5957B1AA93DC100C50DAB /* AppDelegate.swift */; };
 		DBF595811AA93DC100C50DAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF5957F1AA93DC100C50DAB /* Main.storyboard */; };
 		DBF595831AA93DC100C50DAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF595821AA93DC100C50DAB /* Images.xcassets */; };
@@ -65,9 +65,6 @@
 		074DB8D11AAFC05400224FD4 /* Ports.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ports.swift; sourceTree = "<group>"; };
 		074DB8D31AAFC20600224FD4 /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		074DB8D51AAFD00400224FD4 /* LoginToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginToken.swift; sourceTree = "<group>"; };
-		079D54C31AAFEE3E00C66375 /* TallyHo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TallyHo-Bridging-Header.h"; sourceTree = "<group>"; };
-		079D54C41AAFEE3F00C66375 /* KeychainAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainAccess.h; sourceTree = "<group>"; };
-		079D54C51AAFEE3F00C66375 /* KeychainAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainAccess.m; sourceTree = "<group>"; };
 		07B898B81AA94B79005018C9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		07B898BC1AA94C38005018C9 /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		7CD869FFA8C3EBDA4A136995 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +75,7 @@
 		DB3147B61AAE5D4600FBD50C /* HeaderBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderBuilder.swift; sourceTree = "<group>"; };
 		DB3147B81AAE60E300FBD50C /* RestError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestError.swift; sourceTree = "<group>"; };
 		DB3147BB1AAE9B8D00FBD50C /* TallyHo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TallyHo.swift; sourceTree = "<group>"; };
+		DB3147D11AAFE5A900FBD50C /* LoginToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginToken.swift; sourceTree = "<group>"; };
 		DBF595761AA93DC100C50DAB /* TallyHo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TallyHo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF5957A1AA93DC100C50DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBF5957B1AA93DC100C50DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -327,10 +325,15 @@
 				DBF595D31AADF75500C50DAB /* Project.swift */,
 				DBF595D51AADF80100C50DAB /* BranchDetail.swift */,
 				DB3147B81AAE60E300FBD50C /* RestError.swift */,
+<<<<<<< Updated upstream
+				07CD3F671AAE8D40001F025E /* Projects.swift */,
+				DB3147D11AAFE5A900FBD50C /* LoginToken.swift */,
+=======
 				074DB8CF1AAFBD2A00224FD4 /* CurrentApps.swift */,
 				074DB8D11AAFC05400224FD4 /* Ports.swift */,
 				074DB8D31AAFC20600224FD4 /* Routes.swift */,
 				074DB8D51AAFD00400224FD4 /* LoginToken.swift */,
+>>>>>>> Stashed changes
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -338,10 +341,7 @@
 		DBF595DA1AAE290700C50DAB /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				079D54C41AAFEE3F00C66375 /* KeychainAccess.h */,
-				079D54C51AAFEE3F00C66375 /* KeychainAccess.m */,
 				DBF595DB1AAE291D00C50DAB /* NSData+Decoder.swift */,
-				079D54C31AAFEE3E00C66375 /* TallyHo-Bridging-Header.h */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -485,9 +485,9 @@
 				DBF595C11AA93E7700C50DAB /* OptionalExtension.swift in Sources */,
 				DBF595BE1AA93E7700C50DAB /* Logging.swift in Sources */,
 				DBF595BB1AA93E7700C50DAB /* Dictionary.swift in Sources */,
-				079D54C61AAFEE3F00C66375 /* KeychainAccess.m in Sources */,
 				DBF595B91AA93E7700C50DAB /* Signal.swift in Sources */,
 				DBF595BD1AA93E7700C50DAB /* ListExtension.swift in Sources */,
+				DB3147D21AAFE5A900FBD50C /* LoginToken.swift in Sources */,
 				DB3147BC1AAE9B8D00FBD50C /* TallyHo.swift in Sources */,
 				DBF595BF1AA93E7700C50DAB /* ServiceUtil.swift in Sources */,
 				DBF595C21AA93E7700C50DAB /* Rect.swift in Sources */,
@@ -640,12 +640,9 @@
 			baseConfigurationReference = 7CD869FFA8C3EBDA4A136995 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TallyHo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TallyHo/Util/TallyHo-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -654,11 +651,9 @@
 			baseConfigurationReference = CB68821D34DF53453DA3D426 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TallyHo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "TallyHo/Util/TallyHo-Bridging-Header.h";
 			};
 			name = Release;
 		};

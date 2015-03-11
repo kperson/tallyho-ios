@@ -12,7 +12,10 @@ extension HeaderBuilder {
     
     func addAuth() -> HeaderBuilder {
         //TODO
-        return addCustomHeader("X-TOKEN", value: "5sj5wwi0o29uy2dqsvzgpce690zdnd2zqx1lguak4l26ca9jvy")
+        if let auth = KeychainAccess.load("com.userToken") as? String {
+            addCustomHeader("X-TOKEN", value: auth)
+        }
+        return self
     }
     
 }
@@ -35,7 +38,7 @@ class Service {
     
     class func endpointUrl(path: String) -> String {
         //TODO - make configurable
-        let host = "https://apps.keltini.com"
+        let host = KeychainAccess.load("com.domain") as String
         if path.hasPrefix("/") {
             return host + path
         }
@@ -65,47 +68,7 @@ class Service {
 }
 
 class Services {
-    
 
-    
-    
-    
-    class func Login(username: String, password: String, url: String)  {
-        var params: Dictionary<String, AnyObject> = ["username" : username, "password" : password]
-        let formattedURL = (url + "/auth")
-        let headers: HeaderBuilder = HeaderBuilder()
-        headers.acceptJSON()
-        headers.sendJSON()
-        headers.addAuth()
-        ServiceUtil.post(formattedURL, body: Services.asJson(params)!, headers: headers.build()).map(Services.checkForRestErrorAndValidJSON).onSuccess { x in
-
-            
-                println("success")
-           
-            
-            }.onFailure {
-                x in
-                println("failure")
-        }
-    }
-    
-    class func listProjects() {
-        let formattedURL = ("https://apps.keltini.com" + "/projects")
-        let headers: HeaderBuilder = HeaderBuilder()
-        headers.acceptJSON()
-        headers.sendJSON()
-        headers.addAuth()
-        ServiceUtil.get(formattedURL, headers:headers.build()).map(Services.checkForRestErrorAndValidJSON).onSuccess { x in
-            let projects = DecodableList<Project>(decoder: x.body.arrDecoderFromJSON.value!).list
-            }.onFailure {
-                x in
-                println(x.userInfo)
-        }
-    }
-
-    
-    
-    
     class func checkForRestErrorAndValidJSON(response: RequestResponse) -> Try<RequestResponse> {
         var error: NSError?
         if response.statusCode >= 500 {
@@ -135,7 +98,7 @@ class Services {
         }
     }
     
-    private class func asJson(obj: AnyObject) -> NSData? {
+    class func asJson(obj: AnyObject) -> NSData? {
         var error: NSError?
         return NSJSONSerialization.dataWithJSONObject(obj, options: NSJSONWritingOptions.PrettyPrinted, error: &error)
     }
