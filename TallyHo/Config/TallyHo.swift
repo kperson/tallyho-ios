@@ -12,5 +12,6 @@ struct TallyHo {
     
     struct Service {
         static var projectManager: ProjectManager = RestProjectManager()
+        static var userManager: UserManager = RestUserManager()
     }
 }

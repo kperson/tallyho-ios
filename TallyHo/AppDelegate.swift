@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -22,10 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().keyWindow?.tintColor = UIColor.whiteColor()
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent;
         
-        let projectManager = TallyHo.Service.projectManager
-        
-        projectManager.fetchProjects().onSuccess { projects in
-            println(projects)
+        let userManager = TallyHo.Service.userManager
+        userManager.login(username: "kelton", password: "badpassword").onSuccess { token in
+            println("token: \(token)")
+        }.onFailure { err in
+            println("error: \(err.errorMessage)")
         }
         
         
