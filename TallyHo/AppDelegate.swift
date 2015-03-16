@@ -21,7 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let attributes :NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         UINavigationBar.appearance().titleTextAttributes = attributes
         UIApplication.sharedApplication().keyWindow?.tintColor = UIColor.whiteColor()
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent;
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        window?.rootViewController = ControllerSource.loginController()
+    
+        
         return true
     }
 

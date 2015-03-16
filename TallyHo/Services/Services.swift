@@ -35,19 +35,23 @@ extension NSError {
 
 
 class Service {
-    
+
     class func endpointUrl(path: String) -> String {
-        //TODO - make configurable
         let host = KeychainAccess.load("com.domain") as String
+        return endpointUrl(path, endpoint: host)
+    }
+    
+    class func endpointUrl(path: String, endpoint: String) -> String {
         if path.hasPrefix("/") {
-            return host + path
+            return endpoint + path
         }
         else {
-            return host + "/" + path
+            return endpoint + "/" + path
         }
     }
     
     class func checkForServiceErrors(res: RequestResponse) -> Try<RequestResponse> {
+        println(res.bodyAsText)
         if(res.statusCode < 400) {
             return Try<RequestResponse>.Success(res)
         }

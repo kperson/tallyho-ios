@@ -6,7 +6,8 @@
 //  Copyright (c) 2015 TallyHo. All rights reserved.
 //
 
-class Ports : Decodable {
+class PortMapping : Decodable {
+    
     let containerPort: Int
     let servicePort: Int
     

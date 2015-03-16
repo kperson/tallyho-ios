@@ -9,35 +9,26 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
     @IBOutlet weak var usernameTextField: UITextField!
-
     @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBOutlet weak var domainLabel: UITextField!
+    @IBOutlet weak var loginBackground: UIImageView!
+    
+    var userManager: UserManager!
+    
+    //TODO - make add endpoint to onboarding
+    let endpoint = "https://apps.keltini.com"
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //Services.listProjects()
-        
-        // Do any additional setup after loading the view.
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @IBAction func loginButtonTapped(sender: AnyObject) {
-        let userManager = TallyHo.Service.userManager
-        userManager.login(username: usernameTextField.text , password: passwordTextField.text , domain: domainLabel.text).onSuccess { token in
-            KeychainAccess.save("com.userToken", data: token)
-            KeychainAccess.save("com.domain", data: self.domainLabel.text)
-            }.onFailure { err in
-                println("error: \(err.errorMessage)")
+        userManager.login(username: usernameTextField.text, password: passwordTextField.text, endpoint: endpoint)
+        .onSuccess { access in
+            println("TODO")
+        }.onFailure { err in
+            println("error: \(err.errorMessage)")
         }
-        
     }
-
+    
+    
 }

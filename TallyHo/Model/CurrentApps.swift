@@ -13,7 +13,7 @@ class CurrentApps : Decodable {
     let command: String
     let memory: Int
     let dockerRev: String
-    let ports: [Ports]
+    let ports: [PortMapping]
     
     required init(decoder: Decoder) {
         self.name = decoder["name"].string!
@@ -21,7 +21,7 @@ class CurrentApps : Decodable {
         self.command = decoder["command"].string!
         self.memory = decoder["memory"].int!
         self.dockerRev = decoder["dockerRev"].string!
-        self.ports = DecodableList<Ports>(decoder: decoder["Ports"]).list
+        self.ports = DecodableList<PortMapping>(decoder: decoder["ports"]).list
     }
     
 }
