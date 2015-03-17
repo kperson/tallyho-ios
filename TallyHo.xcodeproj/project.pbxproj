@@ -22,6 +22,14 @@
 		DB3147BC1AAE9B8D00FBD50C /* TallyHo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3147BB1AAE9B8D00FBD50C /* TallyHo.swift */; };
 		DB3249241AB67485003585F9 /* AccessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3249231AB67485003585F9 /* AccessInfo.swift */; };
 		DB3249271AB71CFD003585F9 /* TallyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3249261AB71CFD003585F9 /* TallyButton.swift */; };
+		DB7330D61AB8B63B003361AD /* GroupedPoppinAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7330D11AB8B63B003361AD /* GroupedPoppinAnimation.swift */; };
+		DB7330D71AB8B63B003361AD /* PoppinAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7330D21AB8B63B003361AD /* PoppinAnimation.swift */; };
+		DB7330D81AB8B63B003361AD /* PoppinBasicBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7330D31AB8B63B003361AD /* PoppinBasicBuilder.swift */; };
+		DB7330D91AB8B63B003361AD /* PoppinLifeCycleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7330D41AB8B63B003361AD /* PoppinLifeCycleManager.swift */; };
+		DB7330DA1AB8B63B003361AD /* PoppinRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7330D51AB8B63B003361AD /* PoppinRegister.swift */; };
+		DB7330DD1AB8B671003361AD /* CommonAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7330DC1AB8B671003361AD /* CommonAnimations.swift */; };
+		DB7330DF1AB8B7F3003361AD /* LoginLoggingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7330DE1AB8B7F3003361AD /* LoginLoggingIndicator.swift */; };
+		DB7330E11AB8B807003361AD /* LoginLoggingIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7330E01AB8B807003361AD /* LoginLoggingIndicator.xib */; };
 		DBC4C7101AB7206B0027B676 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4C70F1AB7206B0027B676 /* Colors.swift */; };
 		DBC4C7121AB77C080027B676 /* ControllerSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4C7111AB77C080027B676 /* ControllerSource.swift */; };
 		DBF5957C1AA93DC100C50DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF5957B1AA93DC100C50DAB /* AppDelegate.swift */; };
@@ -84,6 +92,14 @@
 		DB3147BB1AAE9B8D00FBD50C /* TallyHo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TallyHo.swift; sourceTree = "<group>"; };
 		DB3249231AB67485003585F9 /* AccessInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessInfo.swift; sourceTree = "<group>"; };
 		DB3249261AB71CFD003585F9 /* TallyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TallyButton.swift; sourceTree = "<group>"; };
+		DB7330D11AB8B63B003361AD /* GroupedPoppinAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupedPoppinAnimation.swift; sourceTree = "<group>"; };
+		DB7330D21AB8B63B003361AD /* PoppinAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoppinAnimation.swift; sourceTree = "<group>"; };
+		DB7330D31AB8B63B003361AD /* PoppinBasicBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoppinBasicBuilder.swift; sourceTree = "<group>"; };
+		DB7330D41AB8B63B003361AD /* PoppinLifeCycleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoppinLifeCycleManager.swift; sourceTree = "<group>"; };
+		DB7330D51AB8B63B003361AD /* PoppinRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoppinRegister.swift; sourceTree = "<group>"; };
+		DB7330DC1AB8B671003361AD /* CommonAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonAnimations.swift; sourceTree = "<group>"; };
+		DB7330DE1AB8B7F3003361AD /* LoginLoggingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLoggingIndicator.swift; sourceTree = "<group>"; };
+		DB7330E01AB8B807003361AD /* LoginLoggingIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginLoggingIndicator.xib; sourceTree = "<group>"; };
 		DBC4C70F1AB7206B0027B676 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DBC4C7111AB77C080027B676 /* ControllerSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerSource.swift; sourceTree = "<group>"; };
 		DBF595761AA93DC100C50DAB /* TallyHo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TallyHo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,8 +206,30 @@
 				DB3249261AB71CFD003585F9 /* TallyButton.swift */,
 				DBC4C70F1AB7206B0027B676 /* Colors.swift */,
 				DBC4C7111AB77C080027B676 /* ControllerSource.swift */,
+				DB7330DE1AB8B7F3003361AD /* LoginLoggingIndicator.swift */,
+				DB7330E01AB8B807003361AD /* LoginLoggingIndicator.xib */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		DB7330D01AB8B63B003361AD /* Poppin */ = {
+			isa = PBXGroup;
+			children = (
+				DB7330D11AB8B63B003361AD /* GroupedPoppinAnimation.swift */,
+				DB7330D21AB8B63B003361AD /* PoppinAnimation.swift */,
+				DB7330D31AB8B63B003361AD /* PoppinBasicBuilder.swift */,
+				DB7330D41AB8B63B003361AD /* PoppinLifeCycleManager.swift */,
+				DB7330D51AB8B63B003361AD /* PoppinRegister.swift */,
+			);
+			path = Poppin;
+			sourceTree = "<group>";
+		};
+		DB7330DB1AB8B65C003361AD /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				DB7330DC1AB8B671003361AD /* CommonAnimations.swift */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		DBF5956D1AA93DC100C50DAB = {
@@ -217,6 +255,7 @@
 		DBF595781AA93DC100C50DAB /* TallyHo */ = {
 			isa = PBXGroup;
 			children = (
+				DB7330DB1AB8B65C003361AD /* Animations */,
 				DBF5957B1AA93DC100C50DAB /* AppDelegate.swift */,
 				DB3147BA1AAE9B7800FBD50C /* Config */,
 				07B898B71AA94B79005018C9 /* Controllers */,
@@ -225,6 +264,7 @@
 				DBF595841AA93DC100C50DAB /* LaunchScreen.xib */,
 				DBF5957F1AA93DC100C50DAB /* Main.storyboard */,
 				DBF595D21AADF71700C50DAB /* Model */,
+				DB7330D01AB8B63B003361AD /* Poppin */,
 				07B898BB1AA94BE8005018C9 /* Services */,
 				DBF595791AA93DC100C50DAB /* Supporting Files */,
 				DB3249251AB71CED003585F9 /* UI */,
@@ -452,6 +492,7 @@
 				DBF595811AA93DC100C50DAB /* Main.storyboard in Resources */,
 				DBF595861AA93DC100C50DAB /* LaunchScreen.xib in Resources */,
 				DBF595831AA93DC100C50DAB /* Images.xcassets in Resources */,
+				DB7330E11AB8B807003361AD /* LoginLoggingIndicator.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,14 +547,17 @@
 				DBF595BE1AA93E7700C50DAB /* Logging.swift in Sources */,
 				DBF595BB1AA93E7700C50DAB /* Dictionary.swift in Sources */,
 				079D54C61AAFEE3F00C66375 /* KeychainAccess.m in Sources */,
+				DB7330D71AB8B63B003361AD /* PoppinAnimation.swift in Sources */,
 				DBF595B91AA93E7700C50DAB /* Signal.swift in Sources */,
 				DBF595BD1AA93E7700C50DAB /* ListExtension.swift in Sources */,
 				DB3147BC1AAE9B8D00FBD50C /* TallyHo.swift in Sources */,
 				DBF595BF1AA93E7700C50DAB /* ServiceUtil.swift in Sources */,
 				DBF595C21AA93E7700C50DAB /* Rect.swift in Sources */,
+				DB7330D81AB8B63B003361AD /* PoppinBasicBuilder.swift in Sources */,
 				DBF595C51AA93E7700C50DAB /* IntervalExtension.swift in Sources */,
 				07B898B91AA94B79005018C9 /* LoginViewController.swift in Sources */,
 				DBF595D61AADF80100C50DAB /* BranchDetail.swift in Sources */,
+				DB7330DA1AB8B63B003361AD /* PoppinRegister.swift in Sources */,
 				074DB8D61AAFD00400224FD4 /* LoginToken.swift in Sources */,
 				DBF595BA1AA93E7700C50DAB /* Date.swift in Sources */,
 				DBF595B71AA93E7700C50DAB /* Dispatch.swift in Sources */,
@@ -530,13 +574,17 @@
 				07B898BD1AA94C38005018C9 /* Services.swift in Sources */,
 				074DB8D01AAFBD2A00224FD4 /* CurrentApps.swift in Sources */,
 				DBF595DC1AAE291D00C50DAB /* NSData+Decoder.swift in Sources */,
+				DB7330DF1AB8B7F3003361AD /* LoginLoggingIndicator.swift in Sources */,
 				DBF595C61AA93E7700C50DAB /* Timer.swift in Sources */,
 				DBF595C31AA93E7700C50DAB /* Segue.swift in Sources */,
+				DB7330D91AB8B63B003361AD /* PoppinLifeCycleManager.swift in Sources */,
 				DBF595D41AADF75500C50DAB /* Project.swift in Sources */,
 				DBF595D11AADF6E700C50DAB /* Decodable.swift in Sources */,
 				DBC4C7101AB7206B0027B676 /* Colors.swift in Sources */,
 				DBF595B61AA93E7700C50DAB /* Color.swift in Sources */,
 				DB3147B71AAE5D4600FBD50C /* HeaderBuilder.swift in Sources */,
+				DB7330D61AB8B63B003361AD /* GroupedPoppinAnimation.swift in Sources */,
+				DB7330DD1AB8B671003361AD /* CommonAnimations.swift in Sources */,
 				DB3249241AB67485003585F9 /* AccessInfo.swift in Sources */,
 				074DB8D21AAFC05400224FD4 /* PortMapping.swift in Sources */,
 				DB3249271AB71CFD003585F9 /* TallyButton.swift in Sources */,

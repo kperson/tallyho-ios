@@ -12,7 +12,7 @@ import UIKit
 class Colors {
     
     class func primaryColor() -> UIColor {
-        return UIColor.orangeColor()
+        return UIColor(red: 22/255, green: 175/255, blue: 202/255, alpha: 1)
     }
     
     class func colorLookup(key: String?) -> UIColor? {

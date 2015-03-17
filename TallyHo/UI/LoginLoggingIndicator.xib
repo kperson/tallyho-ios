@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoginLoggingIndicator" customModule="TallyHo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="220" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKw-VK-Moi">
+                    <rect key="frame" x="55" y="0.0" width="165" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="t2a-Df-Ndi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                    <color key="textColor" white="0.0" alpha="0.88" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Nqa-ny-1P0">
+                    <rect key="frame" x="12" y="14" width="35" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="h0l-66-MSv"/>
+                        <constraint firstAttribute="height" constant="35" id="vw3-Nw-7YW"/>
+                    </constraints>
+                    <color key="color" red="0.0" green="0.51372549019607838" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Nqa-ny-1P0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="2Ht-HH-97c"/>
+                <constraint firstItem="lKw-VK-Moi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="AbF-Xy-vQh"/>
+                <constraint firstItem="lKw-VK-Moi" firstAttribute="leading" secondItem="Nqa-ny-1P0" secondAttribute="trailing" constant="8" id="ODV-zm-SXh"/>
+                <constraint firstAttribute="bottom" secondItem="lKw-VK-Moi" secondAttribute="bottom" id="dVY-7I-wsR"/>
+                <constraint firstAttribute="trailing" secondItem="lKw-VK-Moi" secondAttribute="trailing" id="eud-YQ-8Ms"/>
+                <constraint firstAttribute="bottom" secondItem="Nqa-ny-1P0" secondAttribute="bottom" constant="11" id="fRl-nB-ao8"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="AbF-Xy-vQh"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="loadingLabel" destination="lKw-VK-Moi" id="A6v-S4-RdJ"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="123"/>
+        </view>
+    </objects>
+</document>

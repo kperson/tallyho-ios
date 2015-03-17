@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FyA-Ho-ZWZ">
-                                <rect key="frame" x="40" y="80" width="295" height="45"/>
+                                <rect key="frame" x="30" y="80" width="315" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="ab2-9E-LX0"/>
                                     <constraint firstAttribute="width" constant="283" id="ivs-bq-2jl"/>
@@ -34,7 +34,7 @@
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0mp-cC-Qdz">
-                                <rect key="frame" x="40" y="160" width="295" height="45"/>
+                                <rect key="frame" x="30" y="160" width="315" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="283" id="604-CY-zaq"/>
                                     <constraint firstAttribute="height" constant="45" id="y3a-RD-gnn"/>
@@ -48,7 +48,7 @@
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJr-X6-sRv" customClass="TallyButton" customModule="TallyHo" customModuleProvider="target">
-                                <rect key="frame" x="40" y="225" width="295" height="45"/>
+                                <rect key="frame" x="30" y="220" width="315" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="H6f-sj-EED"/>
                                 </constraints>
@@ -63,23 +63,63 @@
                                     <action selector="loginButtonTapped:" destination="YJa-GH-mMm" eventType="touchUpInside" id="iRd-DV-8de"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kfd-iB-oC8">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSi-Dr-vUw">
+                                        <rect key="frame" x="305" y="0.0" width="70" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="aMp-Sa-Mhy"/>
+                                        </constraints>
+                                        <state key="normal" title="Change">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://apps.keltini.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dlv-4B-hV2">
+                                        <rect key="frame" x="10" y="0.0" width="295" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="zSi-Dr-vUw" secondAttribute="bottom" id="DPK-ik-a5b"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dlv-4B-hV2" secondAttribute="trailing" constant="70" id="EvU-Y4-pjd"/>
+                                    <constraint firstAttribute="trailing" secondItem="zSi-Dr-vUw" secondAttribute="trailing" id="GJE-2L-N2e"/>
+                                    <constraint firstItem="Dlv-4B-hV2" firstAttribute="top" secondItem="Kfd-iB-oC8" secondAttribute="top" id="Gfd-Xk-Lih"/>
+                                    <constraint firstItem="zSi-Dr-vUw" firstAttribute="top" secondItem="Kfd-iB-oC8" secondAttribute="top" id="VaS-Vu-tOd"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dlv-4B-hV2" secondAttribute="bottom" id="gYv-5K-yHe"/>
+                                    <constraint firstItem="Dlv-4B-hV2" firstAttribute="leading" secondItem="Kfd-iB-oC8" secondAttribute="leading" constant="10" id="nHj-bc-5Ch"/>
+                                    <constraint firstItem="zSi-Dr-vUw" firstAttribute="leading" secondItem="Dlv-4B-hV2" secondAttribute="trailing" id="oku-rJ-H3D"/>
+                                    <constraint firstAttribute="height" constant="40" id="rN5-Kc-wwR"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EvU-Y4-pjd"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Kfd-iB-oC8" firstAttribute="leading" secondItem="NNI-0F-B2q" secondAttribute="leading" id="0cE-P0-vp3"/>
                             <constraint firstItem="tJr-X6-sRv" firstAttribute="trailing" secondItem="0mp-cC-Qdz" secondAttribute="trailing" id="90x-th-wbu"/>
                             <constraint firstItem="FyA-Ho-ZWZ" firstAttribute="trailing" secondItem="0mp-cC-Qdz" secondAttribute="trailing" id="BVs-MU-nQQ"/>
-                            <constraint firstAttribute="trailing" secondItem="FyA-Ho-ZWZ" secondAttribute="trailing" constant="40" id="Dob-Ya-VdZ"/>
+                            <constraint firstAttribute="trailing" secondItem="FyA-Ho-ZWZ" secondAttribute="trailing" constant="30" id="Dob-Ya-VdZ"/>
                             <constraint firstItem="g5G-Im-ONv" firstAttribute="leading" secondItem="NNI-0F-B2q" secondAttribute="leading" id="N6t-J1-cbA"/>
-                            <constraint firstItem="FyA-Ho-ZWZ" firstAttribute="leading" secondItem="NNI-0F-B2q" secondAttribute="leading" constant="40" id="NUO-7K-I6N"/>
+                            <constraint firstItem="FyA-Ho-ZWZ" firstAttribute="leading" secondItem="NNI-0F-B2q" secondAttribute="leading" constant="30" id="NUO-7K-I6N"/>
                             <constraint firstAttribute="centerX" secondItem="FyA-Ho-ZWZ" secondAttribute="centerX" id="P8t-Uo-Ic8"/>
                             <constraint firstItem="FyA-Ho-ZWZ" firstAttribute="top" secondItem="C4m-Gq-eZi" secondAttribute="bottom" constant="60" id="U00-oE-gHr"/>
                             <constraint firstItem="tJr-X6-sRv" firstAttribute="leading" secondItem="0mp-cC-Qdz" secondAttribute="leading" id="cob-Fo-nT5"/>
-                            <constraint firstItem="tJr-X6-sRv" firstAttribute="top" secondItem="0mp-cC-Qdz" secondAttribute="bottom" constant="20" id="cve-6T-fHg"/>
+                            <constraint firstItem="tJr-X6-sRv" firstAttribute="top" secondItem="0mp-cC-Qdz" secondAttribute="bottom" constant="15" id="cve-6T-fHg"/>
+                            <constraint firstAttribute="trailing" secondItem="Kfd-iB-oC8" secondAttribute="trailing" id="fNT-rw-EN5"/>
                             <constraint firstItem="FyA-Ho-ZWZ" firstAttribute="leading" secondItem="0mp-cC-Qdz" secondAttribute="leading" id="fsw-QP-p05"/>
                             <constraint firstItem="0mp-cC-Qdz" firstAttribute="top" secondItem="FyA-Ho-ZWZ" secondAttribute="bottom" constant="35" id="glg-Ey-VqV"/>
                             <constraint firstAttribute="trailing" secondItem="g5G-Im-ONv" secondAttribute="trailing" id="kdL-Av-79K"/>
                             <constraint firstItem="g5G-Im-ONv" firstAttribute="top" secondItem="NNI-0F-B2q" secondAttribute="top" id="lJc-k3-6vj"/>
                             <constraint firstItem="ikt-yd-xoJ" firstAttribute="top" secondItem="g5G-Im-ONv" secondAttribute="bottom" id="lZf-lM-8Pn"/>
+                            <constraint firstItem="ikt-yd-xoJ" firstAttribute="top" secondItem="Kfd-iB-oC8" secondAttribute="bottom" id="xWl-Px-01S"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
