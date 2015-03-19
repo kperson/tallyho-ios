@@ -11,9 +11,8 @@ import Foundation
 extension HeaderBuilder {
     
     func addAuth() -> HeaderBuilder {
-        //TODO
-        if let auth = KeychainAccess.load("com.userToken") as? String {
-            addCustomHeader("X-TOKEN", value: auth)
+        if let access = TallyHo.Service.userManager.fetchAccess() {
+            addCustomHeader("X-TOKEN", value: access.token)
         }
         return self
     }
@@ -35,10 +34,11 @@ extension NSError {
 
 
 class Service {
-
+    
     class func endpointUrl(path: String) -> String {
-        let host = KeychainAccess.load("com.domain") as String
-        return endpointUrl(path, endpoint: host)
+        let access = TallyHo.Service.userManager.fetchAccess()!
+        let endpoint = access.endpoint
+        return endpointUrl(path, endpoint: endpoint)
     }
     
     class func endpointUrl(path: String, endpoint: String) -> String {

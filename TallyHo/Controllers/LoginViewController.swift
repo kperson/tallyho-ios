@@ -12,7 +12,6 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var loginBackground: UIImageView!
     
     var userManager: UserManager!
@@ -22,20 +21,32 @@ class LoginViewController: UIViewController {
     let endpoint = "https://apps.keltini.com"
     
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        checkAuthStatus()
+    }
+    
     @IBAction func loginButtonTapped(sender: AnyObject) {
         userManager.login(username: usernameTextField.text, password: passwordTextField.text, endpoint: endpoint)
         .onSuccess { access in
-            println("TODO")
-            return Void()
+            self.handleSuccessLogin()
         }.onFailure { err in
             self.showError(err.errorMessage)
-            return Void()
         }.onComplete { t in
             self.hideLoginAnimation?.start()
             return Void()
         }
         view.endEditing(true)
         showloginAnimation.start()
+    }
+    
+    
+    func handleSuccessLogin() {
+        self.usernameTextField.clearField()
+        self.passwordTextField.clearField()
+        let navController = ControllerSource.navigationController()
+        navController.pushViewController(ControllerSource.projectListController(), animated: false)
+        self.presentViewController(navController, animated: true, completion: nil)
     }
     
     var showloginAnimation: PoppinAnimation {
@@ -62,5 +73,15 @@ class LoginViewController: UIViewController {
         alertView.show()
     }
     
+    func checkAuthStatus() {
+        if let access = userManager.fetchAccess() {
+            //This is just for visual effect
+            showloginAnimation.start()
+            delay(1.second, {
+                self.hideLoginAnimation?.start()
+                self.handleSuccessLogin()
+            })
+        }
+    }
     
 }

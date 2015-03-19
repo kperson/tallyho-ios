@@ -19,3 +19,13 @@ class Project : Decodable  {
     }
     
 }
+
+extension Project {
+
+    var projectAndBranch:[(BranchName, Project)] {
+        return self.branchDetails
+        .map { b in (b.branch, self) }
+        .sorted { (a, b) in a.0 < b.0 }
+    }
+    
+}

@@ -14,6 +14,7 @@ protocol UserManager {
     func saveAccess(access: AccessInfo)
     func fetchAccess() -> AccessInfo?
     var isAuthenticated: Bool { get }
+    func deleteAccess() -> Future<Void>
     
 }
 
@@ -45,16 +46,31 @@ class RestUserManager : UserManager {
     }
     
     func fetchAccess() -> AccessInfo? {
-        let token = KeychainAccess.load("com.token") as String
-        let endpoint = KeychainAccess.load("com.endpoint") as String
-        let createdAt = KeychainAccess.load("com.createdAt") as NSDate
-        return AccessInfo(token: token, endpoint:endpoint, createdAt:createdAt)
+        if let token = KeychainAccess.load("com.token") as? String {
+            let endpoint = KeychainAccess.load("com.endpoint") as String
+            let createdAt = KeychainAccess.load("com.createdAt") as NSDate
+            return AccessInfo(token: token, endpoint:endpoint, createdAt:createdAt)
+        }
+        else {
+            return nil
+        }
     }
     
     func saveAccess(access: AccessInfo) {
         KeychainAccess.save("com.token", data: access.token)
         KeychainAccess.save("com.endpoint", data: access.endpoint)
         KeychainAccess.save("com.createdAt", data: access.createdAt)
+    }
+    
+    func deleteAccess() -> Future<Void> {
+        let headers = HeaderBuilder().addAuth().acceptJSON().build()
+        let logoutUrl = Service.endpointUrl("/auth")
+        KeychainAccess.remove("com.token")
+        KeychainAccess.remove("com.endpoint")
+        KeychainAccess.remove("com.createdAt")
+        return ServiceUtil.delete(logoutUrl, headers: headers)
+            .map(Service.checkForServiceErrors)
+            .map { x in Try.Success(Void()) }
     }
     
 }

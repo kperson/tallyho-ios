@@ -19,7 +19,7 @@ class GroupedPoppinAnimation : PoppinAnimationProtocol {
         self.animations = animations
     }
     
-    func start() {
+    func start() -> PoppinAnimationProtocol {
         self.lifeCycleManager.resetTriggers()
         delay(self.lifeCycleManager.delayInterval) {
             for a in self.animations {
@@ -28,6 +28,7 @@ class GroupedPoppinAnimation : PoppinAnimationProtocol {
                 a.start()
             }
         }
+        return self
     }
     
     func registerForApply(handler: () -> Void) {

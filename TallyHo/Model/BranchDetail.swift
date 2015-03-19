@@ -8,9 +8,11 @@
 
 import Foundation
 
+typealias BranchName = String
+
 class BranchDetail : Decodable {
     
-    let branch: String
+    let branch: BranchName
     let numVersions: Int
     let currentVersionIndex: Int?
     let envVariables: [String : String]

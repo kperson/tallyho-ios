@@ -26,7 +26,7 @@
                                     <constraint firstAttribute="width" constant="283" id="ivs-bq-2jl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="ivs-bq-2jl"/>
@@ -40,7 +40,7 @@
                                     <constraint firstAttribute="height" constant="45" id="y3a-RD-gnn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="604-CY-zaq"/>
@@ -127,9 +127,10 @@
                             </mask>
                         </variation>
                     </view>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="loginBackground" destination="g5G-Im-ONv" id="KDJ-Qv-2tf"/>
@@ -139,7 +140,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kwl-Il-KBt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="301.5" y="261.5"/>
+            <point key="canvasLocation" x="363.5" y="188.5"/>
+        </scene>
+        <!--Root Navigation Controller-->
+        <scene sceneID="jNW-wG-vMC">
+            <objects>
+                <navigationController storyboardIdentifier="RootNavigationControllerId" id="CxJ-Jv-Kto" customClass="RootNavigationController" customModule="TallyHo" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="buY-WP-yju">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="732-oD-Zme" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="313"/>
+        </scene>
+        <!--Project List Controller-->
+        <scene sceneID="fa6-go-5Yz">
+            <objects>
+                <viewController storyboardIdentifier="ProjectListControllerId" id="I5d-WB-UCk" customClass="ProjectListController" customModule="TallyHo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Klg-sK-4WM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Eus-XC-DCi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fRB-ga-kv3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nXo-o1-ev4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nXo-o1-ev4" firstAttribute="top" secondItem="fRB-ga-kv3" secondAttribute="top" id="Fwk-Zm-d90"/>
+                            <constraint firstAttribute="trailing" secondItem="nXo-o1-ev4" secondAttribute="trailing" id="QXX-IR-4Jt"/>
+                            <constraint firstItem="nXo-o1-ev4" firstAttribute="leading" secondItem="fRB-ga-kv3" secondAttribute="leading" id="ixf-XN-upu"/>
+                            <constraint firstItem="Eus-XC-DCi" firstAttribute="top" secondItem="nXo-o1-ev4" secondAttribute="bottom" id="mP4-dm-hCV"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="nXo-o1-ev4" id="UN0-Zt-2Ap"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YJY-tI-ngD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1539.5" y="312.5"/>
         </scene>
     </scenes>
     <resources>

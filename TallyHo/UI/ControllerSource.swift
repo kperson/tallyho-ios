@@ -17,4 +17,17 @@ class ControllerSource {
         return loginController
     }
     
+    
+    class func projectListController() -> ProjectListController {
+        let projectListController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ProjectListControllerId") as ProjectListController
+        projectListController.projectManager = TallyHo.Service.projectManager
+        return projectListController
+    }
+    
+    class func navigationController() -> UINavigationController {
+        let navController =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("RootNavigationControllerId") as RootNavigationController
+        navController.userManager = TallyHo.Service.userManager
+        return navController
+    }
+        
 }

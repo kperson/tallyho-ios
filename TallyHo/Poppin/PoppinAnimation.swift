@@ -13,7 +13,7 @@ protocol PoppinAnimationProtocol {
     func delayAnimation(interval: NSTimeInterval) -> PoppinAnimationProtocol
     func addEdge(animation: PoppinAnimationProtocol)
     func addEdge(animation: PoppinAnimationProtocol, _ trigger: () -> Bool)
-    func start()
+    func start() -> PoppinAnimationProtocol
     func registerForApply(handler: () -> Void)
     func registerForCompletion(handler: () -> Void)
     var isComplete:Bool { get }
@@ -55,7 +55,7 @@ class PoppinAnimation : NSObject, PoppinAnimationProtocol, POPAnimationDelegate 
         lifeCycleManager.addChild(animation, trigger: trigger)
     }
     
-    func start() {
+    func start() -> PoppinAnimationProtocol {
         hasCompleted = false
         self.lifeCycleManager.resetTriggers()
         self.registerKey = PoppinRegister.registerAnimation(self)
@@ -63,6 +63,7 @@ class PoppinAnimation : NSObject, PoppinAnimationProtocol, POPAnimationDelegate 
             self.popAnimation.delegate = self
             self.object.pop_addAnimation(self.popAnimation, forKey: self.key)
         }
+        return self
     }
 
     func registerForApply(handler: () -> Void) {

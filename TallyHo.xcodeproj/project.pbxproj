@@ -22,6 +22,7 @@
 		DB3147BC1AAE9B8D00FBD50C /* TallyHo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3147BB1AAE9B8D00FBD50C /* TallyHo.swift */; };
 		DB3249241AB67485003585F9 /* AccessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3249231AB67485003585F9 /* AccessInfo.swift */; };
 		DB3249271AB71CFD003585F9 /* TallyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3249261AB71CFD003585F9 /* TallyButton.swift */; };
+		DB41D2001ABB631800B9BE37 /* UITextField+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB41D1FF1ABB631800B9BE37 /* UITextField+Util.swift */; };
 		DB7330D61AB8B63B003361AD /* GroupedPoppinAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7330D11AB8B63B003361AD /* GroupedPoppinAnimation.swift */; };
 		DB7330D71AB8B63B003361AD /* PoppinAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7330D21AB8B63B003361AD /* PoppinAnimation.swift */; };
 		DB7330D81AB8B63B003361AD /* PoppinBasicBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7330D31AB8B63B003361AD /* PoppinBasicBuilder.swift */; };
@@ -30,6 +31,13 @@
 		DB7330DD1AB8B671003361AD /* CommonAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7330DC1AB8B671003361AD /* CommonAnimations.swift */; };
 		DB7330DF1AB8B7F3003361AD /* LoginLoggingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7330DE1AB8B7F3003361AD /* LoginLoggingIndicator.swift */; };
 		DB7330E11AB8B807003361AD /* LoginLoggingIndicator.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7330E01AB8B807003361AD /* LoginLoggingIndicator.xib */; };
+		DB7330E31AB8FF49003361AD /* ProjectListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7330E21AB8FF49003361AD /* ProjectListController.swift */; };
+		DB7330E71AB9CF2D003361AD /* SingleLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7330E51AB9CF2D003361AD /* SingleLabelCell.swift */; };
+		DB7330E81AB9CF2D003361AD /* SingleLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7330E61AB9CF2D003361AD /* SingleLabelCell.xib */; };
+		DB7330EB1ABB21E9003361AD /* DoubleLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7330E91ABB21E9003361AD /* DoubleLabelCell.swift */; };
+		DB7330EC1ABB21E9003361AD /* DoubleLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB7330EA1ABB21E9003361AD /* DoubleLabelCell.xib */; };
+		DB7330EF1ABB2E73003361AD /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB7330EE1ABB2E73003361AD /* fontawesome-webfont.ttf */; };
+		DBC148071ABB56DF004A23D8 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC148061ABB56DF004A23D8 /* RootNavigationController.swift */; };
 		DBC4C7101AB7206B0027B676 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4C70F1AB7206B0027B676 /* Colors.swift */; };
 		DBC4C7121AB77C080027B676 /* ControllerSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4C7111AB77C080027B676 /* ControllerSource.swift */; };
 		DBF5957C1AA93DC100C50DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF5957B1AA93DC100C50DAB /* AppDelegate.swift */; };
@@ -43,7 +51,6 @@
 		DBF595B91AA93E7700C50DAB /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF595A01AA93E7700C50DAB /* Signal.swift */; };
 		DBF595BA1AA93E7700C50DAB /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF595A11AA93E7700C50DAB /* Date.swift */; };
 		DBF595BB1AA93E7700C50DAB /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF595A21AA93E7700C50DAB /* Dictionary.swift */; };
-		DBF595BC1AA93E7700C50DAB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBF595A31AA93E7700C50DAB /* Info.plist */; };
 		DBF595BD1AA93E7700C50DAB /* ListExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF595A51AA93E7700C50DAB /* ListExtension.swift */; };
 		DBF595BE1AA93E7700C50DAB /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF595A61AA93E7700C50DAB /* Logging.swift */; };
 		DBF595BF1AA93E7700C50DAB /* ServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF595A81AA93E7700C50DAB /* ServiceUtil.swift */; };
@@ -92,6 +99,7 @@
 		DB3147BB1AAE9B8D00FBD50C /* TallyHo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TallyHo.swift; sourceTree = "<group>"; };
 		DB3249231AB67485003585F9 /* AccessInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessInfo.swift; sourceTree = "<group>"; };
 		DB3249261AB71CFD003585F9 /* TallyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TallyButton.swift; sourceTree = "<group>"; };
+		DB41D1FF1ABB631800B9BE37 /* UITextField+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Util.swift"; sourceTree = "<group>"; };
 		DB7330D11AB8B63B003361AD /* GroupedPoppinAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupedPoppinAnimation.swift; sourceTree = "<group>"; };
 		DB7330D21AB8B63B003361AD /* PoppinAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoppinAnimation.swift; sourceTree = "<group>"; };
 		DB7330D31AB8B63B003361AD /* PoppinBasicBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoppinBasicBuilder.swift; sourceTree = "<group>"; };
@@ -100,6 +108,13 @@
 		DB7330DC1AB8B671003361AD /* CommonAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonAnimations.swift; sourceTree = "<group>"; };
 		DB7330DE1AB8B7F3003361AD /* LoginLoggingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginLoggingIndicator.swift; sourceTree = "<group>"; };
 		DB7330E01AB8B807003361AD /* LoginLoggingIndicator.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginLoggingIndicator.xib; sourceTree = "<group>"; };
+		DB7330E21AB8FF49003361AD /* ProjectListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectListController.swift; sourceTree = "<group>"; };
+		DB7330E51AB9CF2D003361AD /* SingleLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleLabelCell.swift; sourceTree = "<group>"; };
+		DB7330E61AB9CF2D003361AD /* SingleLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleLabelCell.xib; sourceTree = "<group>"; };
+		DB7330E91ABB21E9003361AD /* DoubleLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleLabelCell.swift; sourceTree = "<group>"; };
+		DB7330EA1ABB21E9003361AD /* DoubleLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoubleLabelCell.xib; sourceTree = "<group>"; };
+		DB7330EE1ABB2E73003361AD /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		DBC148061ABB56DF004A23D8 /* RootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
 		DBC4C70F1AB7206B0027B676 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DBC4C7111AB77C080027B676 /* ControllerSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerSource.swift; sourceTree = "<group>"; };
 		DBF595761AA93DC100C50DAB /* TallyHo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TallyHo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +132,6 @@
 		DBF595A01AA93E7700C50DAB /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
 		DBF595A11AA93E7700C50DAB /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		DBF595A21AA93E7700C50DAB /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
-		DBF595A31AA93E7700C50DAB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBF595A51AA93E7700C50DAB /* ListExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListExtension.swift; sourceTree = "<group>"; };
 		DBF595A61AA93E7700C50DAB /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		DBF595A81AA93E7700C50DAB /* ServiceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceUtil.swift; sourceTree = "<group>"; };
@@ -159,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				07B898B81AA94B79005018C9 /* LoginViewController.swift */,
+				DB7330E21AB8FF49003361AD /* ProjectListController.swift */,
+				DBC148061ABB56DF004A23D8 /* RootNavigationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -203,6 +219,7 @@
 		DB3249251AB71CED003585F9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				DB7330E41AB9CF0A003361AD /* Cells */,
 				DB3249261AB71CFD003585F9 /* TallyButton.swift */,
 				DBC4C70F1AB7206B0027B676 /* Colors.swift */,
 				DBC4C7111AB77C080027B676 /* ControllerSource.swift */,
@@ -232,6 +249,25 @@
 			path = Animations;
 			sourceTree = "<group>";
 		};
+		DB7330E41AB9CF0A003361AD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DB7330E51AB9CF2D003361AD /* SingleLabelCell.swift */,
+				DB7330E61AB9CF2D003361AD /* SingleLabelCell.xib */,
+				DB7330E91ABB21E9003361AD /* DoubleLabelCell.swift */,
+				DB7330EA1ABB21E9003361AD /* DoubleLabelCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DB7330ED1ABB2E57003361AD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DB7330EE1ABB2E73003361AD /* fontawesome-webfont.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		DBF5956D1AA93DC100C50DAB = {
 			isa = PBXGroup;
 			children = (
@@ -256,9 +292,11 @@
 			isa = PBXGroup;
 			children = (
 				DB7330DB1AB8B65C003361AD /* Animations */,
+				DBF5957A1AA93DC100C50DAB /* Info.plist */,
 				DBF5957B1AA93DC100C50DAB /* AppDelegate.swift */,
 				DB3147BA1AAE9B7800FBD50C /* Config */,
 				07B898B71AA94B79005018C9 /* Controllers */,
+				DB7330ED1ABB2E57003361AD /* Fonts */,
 				DBF5959B1AA93E7700C50DAB /* FSwift */,
 				DBF595821AA93DC100C50DAB /* Images.xcassets */,
 				DBF595841AA93DC100C50DAB /* LaunchScreen.xib */,
@@ -276,7 +314,6 @@
 		DBF595791AA93DC100C50DAB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DBF5957A1AA93DC100C50DAB /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -305,7 +342,6 @@
 				DBF5959D1AA93E7700C50DAB /* Concurrency */,
 				DBF595A11AA93E7700C50DAB /* Date.swift */,
 				DBF595A21AA93E7700C50DAB /* Dictionary.swift */,
-				DBF595A31AA93E7700C50DAB /* Info.plist */,
 				DBF595A41AA93E7700C50DAB /* List */,
 				DBF595A61AA93E7700C50DAB /* Logging.swift */,
 				DBF595A71AA93E7700C50DAB /* Network */,
@@ -402,6 +438,7 @@
 				079D54C51AAFEE3F00C66375 /* KeychainAccess.m */,
 				DBF595DB1AAE291D00C50DAB /* NSData+Decoder.swift */,
 				079D54C31AAFEE3E00C66375 /* TallyHo-Bridging-Header.h */,
+				DB41D1FF1ABB631800B9BE37 /* UITextField+Util.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -488,9 +525,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBF595BC1AA93E7700C50DAB /* Info.plist in Resources */,
+				DB7330E81AB9CF2D003361AD /* SingleLabelCell.xib in Resources */,
 				DBF595811AA93DC100C50DAB /* Main.storyboard in Resources */,
+				DB7330EF1ABB2E73003361AD /* fontawesome-webfont.ttf in Resources */,
 				DBF595861AA93DC100C50DAB /* LaunchScreen.xib in Resources */,
+				DB7330EC1ABB21E9003361AD /* DoubleLabelCell.xib in Resources */,
 				DBF595831AA93DC100C50DAB /* Images.xcassets in Resources */,
 				DB7330E11AB8B807003361AD /* LoginLoggingIndicator.xib in Resources */,
 			);
@@ -545,6 +584,8 @@
 			files = (
 				DBF595C11AA93E7700C50DAB /* OptionalExtension.swift in Sources */,
 				DBF595BE1AA93E7700C50DAB /* Logging.swift in Sources */,
+				DB7330E71AB9CF2D003361AD /* SingleLabelCell.swift in Sources */,
+				DBC148071ABB56DF004A23D8 /* RootNavigationController.swift in Sources */,
 				DBF595BB1AA93E7700C50DAB /* Dictionary.swift in Sources */,
 				079D54C61AAFEE3F00C66375 /* KeychainAccess.m in Sources */,
 				DB7330D71AB8B63B003361AD /* PoppinAnimation.swift in Sources */,
@@ -552,6 +593,8 @@
 				DBF595BD1AA93E7700C50DAB /* ListExtension.swift in Sources */,
 				DB3147BC1AAE9B8D00FBD50C /* TallyHo.swift in Sources */,
 				DBF595BF1AA93E7700C50DAB /* ServiceUtil.swift in Sources */,
+				DB7330EB1ABB21E9003361AD /* DoubleLabelCell.swift in Sources */,
+				DB41D2001ABB631800B9BE37 /* UITextField+Util.swift in Sources */,
 				DBF595C21AA93E7700C50DAB /* Rect.swift in Sources */,
 				DB7330D81AB8B63B003361AD /* PoppinBasicBuilder.swift in Sources */,
 				DBF595C51AA93E7700C50DAB /* IntervalExtension.swift in Sources */,
@@ -583,6 +626,7 @@
 				DBC4C7101AB7206B0027B676 /* Colors.swift in Sources */,
 				DBF595B61AA93E7700C50DAB /* Color.swift in Sources */,
 				DB3147B71AAE5D4600FBD50C /* HeaderBuilder.swift in Sources */,
+				DB7330E31AB8FF49003361AD /* ProjectListController.swift in Sources */,
 				DB7330D61AB8B63B003361AD /* GroupedPoppinAnimation.swift in Sources */,
 				DB7330DD1AB8B671003361AD /* CommonAnimations.swift in Sources */,
 				DB3249241AB67485003585F9 /* AccessInfo.swift in Sources */,
@@ -714,6 +758,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TallyHo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TallyHo/Util/TallyHo-Bridging-Header.h";
@@ -728,6 +773,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TallyHo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TallyHo/Util/TallyHo-Bridging-Header.h";
