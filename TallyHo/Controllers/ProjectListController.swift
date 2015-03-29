@@ -40,6 +40,13 @@ class ProjectListController : UIViewController, UITableViewDataSource, UITableVi
         return projectBranches.count
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let (branchName, project) = projectBranches[indexPath.row]
+        let branchDetail = project[branchName]
+        let detailController = ControllerSource.branchController(branchDetail, projectName: project.name)
+        navigationController?.pushViewController(detailController, animated: true)
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("DoubleLabelCellId", forIndexPath: indexPath) as DoubleLabelCell
         let (branchName, project) = projectBranches[indexPath.row]

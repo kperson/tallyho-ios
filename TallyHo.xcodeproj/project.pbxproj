@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		074DB8D01AAFBD2A00224FD4 /* CurrentApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074DB8CF1AAFBD2A00224FD4 /* CurrentApps.swift */; };
+		074DB8D01AAFBD2A00224FD4 /* CurrentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074DB8CF1AAFBD2A00224FD4 /* CurrentApp.swift */; };
 		074DB8D21AAFC05400224FD4 /* PortMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074DB8D11AAFC05400224FD4 /* PortMapping.swift */; };
 		074DB8D41AAFC20600224FD4 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074DB8D31AAFC20600224FD4 /* Routes.swift */; };
 		074DB8D61AAFD00400224FD4 /* LoginToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074DB8D51AAFD00400224FD4 /* LoginToken.swift */; };
@@ -40,6 +40,7 @@
 		DBC148071ABB56DF004A23D8 /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC148061ABB56DF004A23D8 /* RootNavigationController.swift */; };
 		DBC4C7101AB7206B0027B676 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4C70F1AB7206B0027B676 /* Colors.swift */; };
 		DBC4C7121AB77C080027B676 /* ControllerSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4C7111AB77C080027B676 /* ControllerSource.swift */; };
+		DBF286DA1AC10F320046ABB7 /* ProjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF286D91AC10F320046ABB7 /* ProjectController.swift */; };
 		DBF5957C1AA93DC100C50DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF5957B1AA93DC100C50DAB /* AppDelegate.swift */; };
 		DBF595811AA93DC100C50DAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF5957F1AA93DC100C50DAB /* Main.storyboard */; };
 		DBF595831AA93DC100C50DAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF595821AA93DC100C50DAB /* Images.xcassets */; };
@@ -80,7 +81,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		074DB8CF1AAFBD2A00224FD4 /* CurrentApps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentApps.swift; sourceTree = "<group>"; };
+		074DB8CF1AAFBD2A00224FD4 /* CurrentApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentApp.swift; sourceTree = "<group>"; };
 		074DB8D11AAFC05400224FD4 /* PortMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortMapping.swift; sourceTree = "<group>"; };
 		074DB8D31AAFC20600224FD4 /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		074DB8D51AAFD00400224FD4 /* LoginToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginToken.swift; sourceTree = "<group>"; };
@@ -117,6 +118,7 @@
 		DBC148061ABB56DF004A23D8 /* RootNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
 		DBC4C70F1AB7206B0027B676 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DBC4C7111AB77C080027B676 /* ControllerSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerSource.swift; sourceTree = "<group>"; };
+		DBF286D91AC10F320046ABB7 /* ProjectController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectController.swift; sourceTree = "<group>"; };
 		DBF595761AA93DC100C50DAB /* TallyHo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TallyHo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF5957A1AA93DC100C50DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBF5957B1AA93DC100C50DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				07B898B81AA94B79005018C9 /* LoginViewController.swift */,
 				DB7330E21AB8FF49003361AD /* ProjectListController.swift */,
 				DBC148061ABB56DF004A23D8 /* RootNavigationController.swift */,
+				DBF286D91AC10F320046ABB7 /* ProjectController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -422,7 +425,7 @@
 				DBF595D31AADF75500C50DAB /* Project.swift */,
 				DBF595D51AADF80100C50DAB /* BranchDetail.swift */,
 				DB3147B81AAE60E300FBD50C /* RestError.swift */,
-				074DB8CF1AAFBD2A00224FD4 /* CurrentApps.swift */,
+				074DB8CF1AAFBD2A00224FD4 /* CurrentApp.swift */,
 				074DB8D11AAFC05400224FD4 /* PortMapping.swift */,
 				074DB8D31AAFC20600224FD4 /* Routes.swift */,
 				074DB8D51AAFD00400224FD4 /* LoginToken.swift */,
@@ -595,6 +598,7 @@
 				DBF595BF1AA93E7700C50DAB /* ServiceUtil.swift in Sources */,
 				DB7330EB1ABB21E9003361AD /* DoubleLabelCell.swift in Sources */,
 				DB41D2001ABB631800B9BE37 /* UITextField+Util.swift in Sources */,
+				DBF286DA1AC10F320046ABB7 /* ProjectController.swift in Sources */,
 				DBF595C21AA93E7700C50DAB /* Rect.swift in Sources */,
 				DB7330D81AB8B63B003361AD /* PoppinBasicBuilder.swift in Sources */,
 				DBF595C51AA93E7700C50DAB /* IntervalExtension.swift in Sources */,
@@ -615,7 +619,7 @@
 				DB3147B91AAE60E300FBD50C /* RestError.swift in Sources */,
 				DBC4C7121AB77C080027B676 /* ControllerSource.swift in Sources */,
 				07B898BD1AA94C38005018C9 /* Services.swift in Sources */,
-				074DB8D01AAFBD2A00224FD4 /* CurrentApps.swift in Sources */,
+				074DB8D01AAFBD2A00224FD4 /* CurrentApp.swift in Sources */,
 				DBF595DC1AAE291D00C50DAB /* NSData+Decoder.swift in Sources */,
 				DB7330DF1AB8B7F3003361AD /* LoginLoggingIndicator.swift in Sources */,
 				DBF595C61AA93E7700C50DAB /* Timer.swift in Sources */,

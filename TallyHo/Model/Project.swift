@@ -28,4 +28,8 @@ extension Project {
         .sorted { (a, b) in a.0 < b.0 }
     }
     
+    subscript(branch: BranchName) -> BranchDetail {
+        return self.branchDetails.findFirst { x in x.branch == branch }!
+    }
+    
 }

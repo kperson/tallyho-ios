@@ -29,5 +29,12 @@ class ControllerSource {
         navController.userManager = TallyHo.Service.userManager
         return navController
     }
+    
+    class func branchController(detail: BranchDetail, projectName: String) -> ProjectController {
+        let projectController =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ProjectControllerId") as ProjectController
+        projectController.detail = detail
+        projectController.projectName = projectName
+        return projectController
+    }
         
 }

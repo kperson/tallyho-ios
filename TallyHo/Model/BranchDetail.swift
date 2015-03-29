@@ -10,22 +10,32 @@ import Foundation
 
 typealias BranchName = String
 
-class BranchDetail : Decodable {
+class BranchDetail : Decodable  {
     
     let branch: BranchName
     let numVersions: Int
     let currentVersionIndex: Int?
     let envVariables: [String : String]
-    let routes: [Routes]?
+    let routes: [Routes]
+    let currentApps: [CurrentApp]
     
-    required init(decoder: Decoder) {
-        self.branch = decoder["branch"].string!
-        self.numVersions = decoder["numVersions"].int!
-        if let version = decoder["currentVersionIndex"].int {
-            self.currentVersionIndex = version
-        }
-        self.envVariables = decoder["envs"].dict!.items as [String : String]
-        self.routes = DecodableList<Routes>(decoder: decoder["routes"]).list
-        
+    
+    init(branch: String, numVersions: Int, envVariables: [String : String], routes: [Routes], currentApps: [CurrentApp], currentVersionIndex: Int?) {
+        self.branch = branch
+        self.numVersions = numVersions
+        self.envVariables = envVariables
+        self.routes = routes
+        self.currentApps = currentApps
     }
+    
+    convenience required init(decoder: Decoder) {
+        let branch = decoder["branch"].string!
+        let numVersions = decoder["numVersions"].int!
+        let version = decoder["currentVersionIndex"].int
+        let envVariables = decoder["envs"].dict!.items as [String : String]
+        let routes = DecodableList<Routes>(decoder: decoder["routes"]).list
+        let currentApps = decoder["currentApps"].arr.flatMap { x in DecodableList<CurrentApp>(decoder: decoder["currentApps"]).list } ?? []
+        self.init(branch: branch, numVersions: numVersions, envVariables: envVariables, routes: routes, currentApps: currentApps, currentVersionIndex: version)
+    }
+    
 }

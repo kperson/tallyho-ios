@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 TallyHo. All rights reserved.
 //
 
-class CurrentApps : Decodable {
+class CurrentApp : Decodable {
     
     let name: String
     let file: String
@@ -17,7 +17,7 @@ class CurrentApps : Decodable {
     
     required init(decoder: Decoder) {
         self.name = decoder["name"].string!
-        self.file = decoder["numVersions"].string!
+        self.file = decoder["file"].string!
         self.command = decoder["command"].string!
         self.memory = decoder["memory"].int!
         self.dockerRev = decoder["dockerRev"].string!

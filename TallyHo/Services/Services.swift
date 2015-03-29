@@ -51,11 +51,12 @@ class Service {
     }
     
     class func checkForServiceErrors(res: RequestResponse) -> Try<RequestResponse> {
-        println(res.bodyAsText)
         if(res.statusCode < 400) {
             return Try<RequestResponse>.Success(res)
         }
         else  {
+            println("status code: \(res.statusCode)")
+            println("body: \(res.bodyAsText)")
             switch res.body.dictDecoderFromJSON {
             case .Success(let decoder):
                 let restError = RestError(decoder: decoder())

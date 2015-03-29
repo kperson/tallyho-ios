@@ -16,23 +16,15 @@ class RootNavigationController: UINavigationController, UINavigationControllerDe
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-        // Do any additional setup after loading the view.
+        addNavigationDectoration()
+        self.navigationBar.tintColor = UIColor.whiteColor()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
-    
         if let tv = self.topViewController {
             addLogoutButton()
         }
     }
-    
-
     
     func addLogoutButton() {
         let logoutButton = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
@@ -49,6 +41,12 @@ class RootNavigationController: UINavigationController, UINavigationControllerDe
     func didTapLogout() {
         userManager.deleteAccess()
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func addNavigationDectoration() {
+        let bottomBorder = UIView(frame: CGRectMake(0, self.navigationBar.frame.height - 3, self.navigationBar.frame.width, 3))
+        bottomBorder.backgroundColor = UIColor(red: 1, green: 138.0/255.0, blue: 128.0/255.0, alpha: 1)
+        self.navigationBar.addSubview(bottomBorder)
     }
 
 }

@@ -18,7 +18,7 @@ protocol ProjectManager {
 class RestProjectManager : ProjectManager {
     func fetchProjects() -> Future<[Project]> {
         let headers = HeaderBuilder().acceptJSON().addAuth().build()
-        let projectUrl = Service.endpointUrl("/projects")
+        let projectUrl = Service.endpointUrl("/deployment")
         return ServiceUtil.get(projectUrl, headers: headers)
         .map(Service.checkForServiceErrors)
         .map { res in
